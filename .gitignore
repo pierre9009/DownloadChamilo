@@ -1,0 +1,5 @@
+# Dossiers créés par PyInstaller
+build/
+dist/
+*.spec
+__pycache__/
