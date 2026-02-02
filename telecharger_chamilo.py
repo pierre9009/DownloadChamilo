@@ -2,6 +2,7 @@ import os
 import re
 import time
 import requests
+import sys
 from selenium import webdriver
 from selenium.webdriver.chrome.service import Service
 from selenium.webdriver.chrome.options import Options
@@ -12,6 +13,7 @@ from bs4 import BeautifulSoup
 from tqdm import tqdm
 from urllib.parse import urljoin
 from webdriver_manager.chrome import ChromeDriverManager
+from selenium.common.exceptions import WebDriverException
 
 class ChamiloDownloader:
     def __init__(self):
@@ -19,14 +21,30 @@ class ChamiloDownloader:
         self.session = requests.Session()
         self.courses = []
         self.download_dir = os.path.join(os.path.expanduser("~"), "Downloads", "Cours-Chamilo")
-        self.visited_folders = set()  # Pour éviter les boucles infinies
+        self.visited_folders = set()
         
         # Configuration du navigateur
         options = Options()
         options.add_argument("--window-size=1920,1080")
+        # On peut ajouter cette option pour éviter des logs inutiles dans la console
+        options.add_experimental_option('excludeSwitches', ['enable-logging'])
         
-        # Initialisation du navigateur
-        self.driver = webdriver.Chrome(service=Service(ChromeDriverManager().install()), options=options)
+        print("Vérification de l'environnement...")
+        try:
+            # Initialisation du navigateur
+            self.driver = webdriver.Chrome(
+                service=Service(ChromeDriverManager().install()), 
+                options=options
+            )
+        except Exception as e:
+            print("\n" + "!"*50)
+            print("ERREUR : Google Chrome n'a pas été détecté.")
+            print("Ce script nécessite que Google Chrome soit installé sur votre PC.")
+            print("Lien : https://www.google.com/chrome/")
+            print("!"*50 + "\n")
+            # On attend un peu que l'utilisateur puisse lire avant de fermer
+            input("Appuyez sur ENTRÉE pour quitter...")
+            sys.exit(1)
     
     def login_manually(self):
         """Permettre à l'utilisateur de se connecter manuellement"""

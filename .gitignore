@@ -3,3 +3,7 @@ build/
 dist/
 *.spec
 __pycache__/
+venv/
+nuitka-crash-report.xml
+telecharger_chamilo.exe
+telecharger_chamilo.dist/
