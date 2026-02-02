@@ -1,4 +1,4 @@
-# 📂 Chamilo Downloader (Grenoble INP)
+# 📂 Chamilo Downloader
 
 Petit outil pour télécharger tous les documents de cours Chamilo en un clic.
 
