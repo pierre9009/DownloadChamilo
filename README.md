@@ -6,16 +6,14 @@ Petit outil pour télécharger tous les documents de cours Chamilo en un clic.
 
 * **Google Chrome** doit être installé : [Télécharger Chrome](https://www.google.com/chrome/)
 
----
 
 ## 🚀 Option 1 : Utilisation rapide (Windows)
 
 *Aucune installation de Python requise.*
 
-1. Télécharge `Downloader_Chamilo.exe` dans la section **Releases**.
+1. Télécharge [`Downloader_Chamilo.exe`](https://github.com/pierre9009/DownloadChamilo/releases/tag/main).
 2. Lance le fichier (Si Windows affiche une alerte : *Informations complémentaires* -> *Exécuter quand même*).
-3. Connecte-toi sur la fenêtre Chrome qui s'ouvre.
-4. Reviens dans la console, appuie sur **ENTRÉE** et choisis tes cours.
+
 
 ## 🐍 Option 2 : Utilisation via Python
 
