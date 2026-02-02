@@ -11,9 +11,8 @@ Petit outil pour télécharger tous les documents de cours Chamilo en un clic.
 
 *Aucune installation de Python requise.*
 
-1. Télécharge [`Downloader_Chamilo.exe`](https://github.com/pierre9009/DownloadChamilo/releases/tag/main).
+1. Télécharge [`Downloader_Chamilo.exe`](https://github.com/pierre9009/DownloadChamilo/releases/download/Main_tag/telecharger_chamilo.exe).
 2. Lance le fichier (Si Windows affiche une alerte : *Informations complémentaires* -> *Exécuter quand même*).
-
 
 ## 🐍 Option 2 : Utilisation via Python
 
